@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Pacifico&display=swap');
+
+:root {
+    --red: #d32f2f;
+    --blue: #1e4fa6;
+    --blue-dark: #1e3c72;
+    --dark: rgba(0,0,0,.65);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+}
+
+.hero {
+    min-height: 100vh;
+    background:
+        linear-gradient(var(--dark), var(--dark)),
+        url("https://images.unsplash.com/photo-1509395176047-4a66953fd231?auto=format&fit=crop&w=1600&q=80");
+    background-size: cover;
+    background-position: center;
+    padding: 40px 80px;
+}
+
+.navbar {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 70px;
+}
+
+.navbar a {
+    padding: 8px 20px;
+    background: #d9d9d9;
+    color: #000;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.navbar a.active {
+    background: var(--red);
+    color: #fff;
+}
+
+.navbar a:hover {
+    background: #bfbfbf;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 70px;
+}
+
+.text {
+    max-width: 560px;
+}
+
+.title {
+    font-family: 'Pacifico', cursive;
+    font-size: 70px;
+    margin-bottom: 25px;
+    color: #1e1e1e;
+    text-shadow: 2px 2px 3px rgba(255,255,255,0.15);
+}
+
+.desc {
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+
+.section-title {
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.download-btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 14px 32px;
+    background: #1976d2;
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.download-btn:hover {
+    background: #0d5cab;
+}
+
+.card {
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(15, 13, 13, 0.4);
+    max-width: 520px;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 15px;
+    display: block;
+}
+
+.contact-list strong {
+    display: block;
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+@media (max-width: 1024px) {
+
+    .hero {
+        padding: 30px;
+    }
+
+    .content {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .title {
+        font-size: 50px;
+    }
+
+    .navbar {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .card {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 42px;
+    }
+}
