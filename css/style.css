@@ -18,6 +18,7 @@ body {
     color: #fff;
 }
 
+
 .hero {
     min-height: 100vh;
     background:
@@ -25,6 +26,7 @@ body {
         url("https://media.licdn.com/dms/image/v2/D4D12AQEZbGwHNNsucw/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1723115372722?e=2147483647&v=beta&t=HAETG9xiZz-dPEsvKA8tD0568wN_RmfzS8kvyc1tQ8c");
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
     padding: 40px 80px;
 }
 
@@ -32,6 +34,7 @@ body {
     display: flex;
     gap: 15px;
     margin-bottom: 70px;
+    flex-wrap: wrap;
 }
 
 .navbar a {
@@ -77,12 +80,14 @@ body {
     font-size: 14px;
     line-height: 1.8;
     margin-bottom: 18px;
+    text-align: justify;
 }
 
 .section-title {
     font-weight: 600;
     margin-top: 10px;
 }
+
 
 .download-btn {
     display: inline-block;
@@ -100,10 +105,12 @@ body {
     background: #0d5cab;
 }
 
+
 .card {
     border-radius: 20px;
     box-shadow: 0 15px 35px rgba(15, 13, 13, 0.4);
     max-width: 520px;
+    width: 100%;
 }
 
 .card img {
@@ -112,12 +119,14 @@ body {
     display: block;
 }
 
+
 .contact-list strong {
     display: block;
     margin-top: 10px;
     font-weight: 600;
 }
 
+/*tablet*/
 @media (max-width: 1024px) {
 
     .hero {
@@ -134,9 +143,12 @@ body {
         font-size: 50px;
     }
 
+    .desc {
+        text-align: center;
+    }
+
     .navbar {
         justify-content: center;
-        flex-wrap: wrap;
     }
 
     .card {
@@ -144,8 +156,24 @@ body {
     }
 }
 
-@media (max-width: 480px) {
+/*mobile*/
+@media (max-width: 576px) {
+
+    .hero {
+        padding: 20px;
+    }
+
     .title {
         font-size: 42px;
+    }
+
+    .desc {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    .download-btn {
+        padding: 10px 20px;
+        font-size: 14px;
     }
 }
