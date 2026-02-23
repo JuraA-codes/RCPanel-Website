@@ -32,18 +32,18 @@ body {
 
 .navbar {
     display: flex;
-    gap: 15px;
+    gap: 75px;
     margin-bottom: 70px;
     flex-wrap: wrap;
 }
 
 .navbar a {
-    padding: 8px 20px;
+    padding: 14px 36px;
     background: #d9d9d9;
     color: #000;
     border-radius: 20px;
-    font-size: 14px;
-    font-weight: 600;
+    font-size: 20px;
+    font-weight: bolder;
     text-decoration: none;
     transition: 0.3s ease;
 }
