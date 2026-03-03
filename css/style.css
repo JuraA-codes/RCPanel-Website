@@ -28,24 +28,41 @@ body {
     background-position: center;
     background-attachment: fixed;
     padding: 40px 80px;
+    display: flex;              
+    flex-direction: column;     
+    justify-content: center;     
+    align-items: center;
 }
 
 .navbar {
-    display: flex;
-    gap: 75px;
-    margin-bottom: 70px;
-    flex-wrap: wrap;
+    display: inline-flex;
+    margin-bottom: 35px;
+    
 }
 
 .navbar a {
     padding: 14px 36px;
+    margin: 20px;
     background: #d9d9d9;
+    gap: 25px;
     color: #000;
-    border-radius: 20px;
-    font-size: 20px;
+    border-radius: 30px;
+    font-size: 17px;
     font-weight: bolder;
     text-decoration: none;
-    transition: 0.3s ease;
+    transition: 0.3s ease-out;
+}
+
+.dl-btn{
+    display: inline;
+    margin-left: 200px;
+}
+
+.dl-btn a.download-btn{
+   
+    font-size: 17px;
+    padding: 13px 22px;
+    transition: 0.3s;
 }
 
 .navbar a.active {
@@ -64,8 +81,10 @@ body {
     gap: 70px;
 }
 
+
 .text {
-    max-width: 560px;
+    max-width: 780px;
+    text-align: center;
 }
 
 .title {
@@ -80,26 +99,18 @@ body {
     font-size: 14px;
     line-height: 1.8;
     margin-bottom: 18px;
+    margin-top: 69px;
     text-align: justify;
 }
 
 .section-title {
     font-weight: 600;
     margin-top: 10px;
+    text-align: center; 
 }
 
 
-.download-btn {
-    display: inline-block;
-    margin-top: 25px;
-    padding: 14px 32px;
-    background: #1976d2;
-    color: #fff;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: 0.3s;
-}
+
 
 .download-btn:hover {
     background: #0d5cab;
@@ -107,8 +118,7 @@ body {
 
 
 .card {
-    border-radius: 20px;
-    box-shadow: 0 15px 35px rgba(15, 13, 13, 0.4);
+    border-radius: 30px;
     max-width: 520px;
     width: 100%;
 }
@@ -122,8 +132,36 @@ body {
 
 .contact-list strong {
     display: block;
-    margin-top: 10px;
+    margin-top: 50px;
     font-weight: 600;
+}
+
+
+
+.submit-btn {
+    background: var(--red);
+    color: #fff;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    background: #b71c1c;
+}
+
+/* Responsive for form */
+@media (max-width: 1024px) {
+    .contact-form {
+        margin-top: 40px;
+    }
+
+    .form-row {
+        flex-direction: column;
+    }
 }
 
 /*tablet*/
