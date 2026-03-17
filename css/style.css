@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Pacifico&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+}
+
+.hero {
+    min-height: 100vh;
+    background:
+        linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.65)),
+        url("https://media.licdn.com/dms/image/v2/D4D12AQEZbGwHNNsucw/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1723115372722?e=2147483647&v=beta&t=HAETG9xiZz-dPEsvKA8tD0568wN_RmfzS8kvyc1tQ8c");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 40px 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar {
+    display: inline-flex;
+    margin-bottom: 35px;
+}
+
+.navbar a {
+    padding: 14px 36px;
+    margin: 20px;
+    background: #d9d9d9;
+    color: #000;
+    border-radius: 30px;
+    font-size: 17px;
+    font-weight: bolder;
+    text-decoration: none;
+    transition: 0.3s ease-out;
+}
+
+.navbar a.active {
+    background: #d32f2f;
+    color: #fff;
+}
+
+.navbar a:hover {
+    background: #bfbfbf;
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    z-index: 100;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: #ffffff; /* Change to match your theme */
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.dl-btn {
+    display: inline-block;
+    margin-left: 200px;
+}
+
+.dl-btn a.download-btn {
+    font-size: 17px;
+    padding: 13px 22px;
+    transition: 0.3s;
+}
+
+.download-btn:hover {
+    background: #0d5cab;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 70px;
+}
+
+.text {
+    max-width: 780px;
+    text-align: center;
+}
+
+.title {
+    font-family: 'Pacifico', cursive;
+    font-size: 70px;
+    margin-bottom: 25px;
+    color: #ffffff;
+    text-shadow: 2px 2px 3px rgba(255,255,255,0.15);
+}
+
+.desc {
+    font-size: 14px;
+    line-height: 1.8;
+    margin: 69px 0 18px;
+    text-align: justify;
+}
+
+.section-title {
+    font-weight: 600;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.card {
+    border-radius: 30px;
+    max-width: 520px;
+    width: 100%;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 15px;
+    display: block;
+}
+
+.contact-list strong {
+    display: block;
+    margin-top: 50px;
+    font-weight: 600;
+}
+
+.submit-btn {
+    background: #d32f2f;
+    color: #fff;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    background: #b71c1c;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+
+    .hero {
+        padding: 30px;
+    }
+
+    .content {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .title {
+        font-size: 50px;
+    }
+
+    .desc {
+        text-align: center;
+    }
+
+    .navbar {
+        justify-content: center;
+    }
+
+    .card {
+        max-width: 90%;
+    }
+
+    .contact-form {
+        margin-top: 40px;
+    }
+
+    .form-row {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 576px) {
+
+    .content {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .hamburger {
+        display: flex; /* Show burger icon */
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    .nav-links {
+        display: none; 
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.8); 
+        padding: 20px 0;
+       
+    }
+
+    
+    .nav-links.show {
+        display: flex;
+    }
+
+    
+    .nav-links a {
+        font-size: 13px;
+        padding: 10px 20px;
+    }
+
+    .dl-btn a.download-btn {
+        display: flex;
+        font-size: 10px;
+        background-color: #0d5cab;
+        color: wheat;
+    }
+}
