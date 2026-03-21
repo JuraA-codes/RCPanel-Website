@@ -111,7 +111,7 @@ body {
 
 .desc {
     font-size: 14px;
-    line-height: 1.8;
+    
     margin: 69px 0 18px;
     text-align: justify;
 }
@@ -129,9 +129,22 @@ body {
 }
 
 .card img {
+    padding-bottom: 25px;
     width: 100%;
-    border-radius: 15px;
-    display: block;
+    border-radius: 125px;
+    display: flex;
+}
+
+.card-sd{
+    border-radius: 30px;
+    max-width: 520px;
+    width: 100%;
+}
+
+.card-sd img {
+    padding-bottom: 250px;
+    width: 100%;
+    display: flex;
 }
 
 .contact-list strong {
@@ -155,44 +168,7 @@ body {
     background: #b71c1c;
 }
 
-/* Tablet */
-@media (max-width: 768px) {
-
-    .hero {
-        padding: 30px;
-    }
-
-    .content {
-        flex-direction: column;
-        text-align: center;
-        gap: 40px;
-    }
-
-    .title {
-        font-size: 50px;
-    }
-
-    .desc {
-        text-align: center;
-    }
-
-    .navbar {
-        justify-content: center;
-    }
-
-    .card {
-        max-width: 90%;
-    }
-
-    .contact-form {
-        margin-top: 40px;
-    }
-
-    .form-row {
-        flex-direction: column;
-    }
-}
-
+/*for mobile*/
 @media (max-width: 576px) {
 
     .content {
